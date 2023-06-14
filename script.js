@@ -27,7 +27,7 @@ form.addEventListener('submit', (e) => {
 
 // Crear un nuevo registro
 function createItem(producto, descripcion, precio) {
-  fetch('https://main--spontaneous-beijinho-e36a51.netlify.app/', {
+  fetch('https://4em-wspchatbot-pru.netlify.app/', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -45,7 +45,7 @@ function createItem(producto, descripcion, precio) {
 
 // Obtener todos los registros
 function getItems() {
-  fetch('https://main--spontaneous-beijinho-e36a51.netlify.app/')
+  fetch('https://4em-wspchatbot-pru.netlify.app/')
     .then((res) => res.json())
     .then((data) => {
       data.forEach((item) => {
@@ -78,7 +78,7 @@ function displayItem(item) {
 
 // Editar un registro
 function editItem(id) {
-  fetch(`https://main--spontaneous-beijinho-e36a51.netlify.app/${id}`)
+  fetch(`https://4em-wspchatbot-pru.netlify.app/${id}`)
     .then((res) => res.json())
     .then((data) => {
       form.dataset.itemId = data._id;
@@ -93,7 +93,7 @@ function editItem(id) {
 
 // Actualizar un registro existente
 function updateItem(id, producto, descripcion, precio) {
-  fetch(`https://main--spontaneous-beijinho-e36a51.netlify.app/${id}`, {
+  fetch(`https://4em-wspchatbot-pru.netlify.app/${id}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',
@@ -115,7 +115,7 @@ function updateItem(id, producto, descripcion, precio) {
 
 // Eliminar un registro
 function deleteItem(id) {
-  fetch(`https://main--spontaneous-beijinho-e36a51.netlify.app/${id}`, {
+  fetch(`https://4em-wspchatbot-pru.netlify.app/${id}`, {
     method: 'DELETE',
   })
     .then(() => {
