@@ -27,7 +27,7 @@ form.addEventListener('submit', (e) => {
 
 // Crear un nuevo registro
 function createItem(producto, descripcion, precio) {
-  fetch('http://localhost:3001/', {
+  fetch('http://18.211.23.8/', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -45,7 +45,7 @@ function createItem(producto, descripcion, precio) {
 
 // Obtener todos los registros
 function getItems() {
-  fetch('http://localhost:3001/')
+  fetch('http://18.211.23.8/')
     .then((res) => res.json())
     .then((data) => {
       data.forEach((item) => {
@@ -78,7 +78,7 @@ function displayItem(item) {
 
 // Editar un registro
 function editItem(id) {
-  fetch(`http://localhost:3001/${id}`)
+  fetch(`http://18.211.23.8/${id}`)
     .then((res) => res.json())
     .then((data) => {
       form.dataset.itemId = data._id;
@@ -93,7 +93,7 @@ function editItem(id) {
 
 // Actualizar un registro existente
 function updateItem(id, producto, descripcion, precio) {
-  fetch(`http://localhost:3001/${id}`, {
+  fetch(`http://18.211.23.8/${id}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',
@@ -115,7 +115,7 @@ function updateItem(id, producto, descripcion, precio) {
 
 // Eliminar un registro
 function deleteItem(id) {
-  fetch(`http://localhost:3001/${id}`, {
+  fetch(`http://18.211.23.8/${id}`, {
     method: 'DELETE',
   })
     .then(() => {
