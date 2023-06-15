@@ -91,7 +91,7 @@ app.delete('/:id', async (req, res) => {
 });
 
 // Iniciar el servidor
-const port = 3001;
+const port = 80;
 app.listen(port, () => {
   console.log(`Servidor web en funcionamiento en http://localhost:${port}`);
 });
